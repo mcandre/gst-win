@@ -1,0 +1,120 @@
+#!/bin/sh
+
+: ${prefix:=/home/gwenael/gst-win}
+: ${exec_prefix:=${prefix}}
+: ${libdir:="/home/gwenael/gst-win"}
+: ${datarootdir:=${prefix}/share}
+: ${pkglibdir:="/home/gwenael/gst-win/smalltalk"}
+: ${pkgdatadir:="${datarootdir}/smalltalk"}
+: ${moduledir:="${pkglibdir}"}
+
+exec_prefix_set=no
+
+usage()
+{
+	cat <<EOF
+Usage: gst-config [OPTIONS] [LIBRARIES]
+Options:
+	[--prefix[=DIR]]
+	[--exec-prefix[=DIR]]
+	[--version]
+	[--libdir]
+	[--datadir]
+	[--libs]
+	[--cflags]
+Libraries:
+	gst
+EOF
+	exit $1
+}
+
+if test $# -eq 0; then
+	usage 1 1>&2
+fi
+
+lib_gtk=yes
+
+while test $# -gt 0; do
+  case "$1" in
+  -*=*) optarg=`echo "$1" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
+  *) optarg= ;;
+  esac
+
+  case $1 in
+    --prefix=*)
+      prefix=$optarg
+      if test $exec_prefix_set = no ; then
+        exec_prefix=$optarg
+      fi
+      ;;
+    --prefix)
+      echo_prefix=yes
+      ;;
+    --exec-prefix=*)
+      exec_prefix=$optarg
+      exec_prefix_set=yes
+      ;;
+    --datadir)
+      echo_datadir=yes
+      ;;
+    --libdir)
+      echo_libdir=yes
+      ;;
+    --exec-prefix)
+      echo_exec_prefix=yes
+      ;;
+    --help)
+      usage 0
+      ;;
+    --version)
+      echo 3.2.90
+      ;;
+    --cflags)
+      echo_cflags=yes
+      ;;
+    --libs)
+      echo_libs=yes
+      ;;
+    gst)
+      lib_gst=yes
+      ;;
+    *)
+      usage 1 1>&2
+      ;;
+  esac
+  shift
+done
+
+gst_libs="-L${libdir} -lm "
+
+if test "$echo_prefix" = "yes"; then
+	echo $prefix
+fi
+
+if test "$echo_exec_prefix" = "yes"; then
+	echo $exec_prefix
+fi
+
+if test "$echo_cflags" = "yes"; then
+      my_cflags=
+      test ${prefix}/include != /usr/include & my_cflags=-I${prefix}/include
+
+      echo $my_cflags
+fi
+
+if test "$echo_libs" = "yes"; then
+      my_gst_libs=-L/home/gwenael/gst-win
+      for i in $gst_libs ; do
+	test $i != -L/home/gwenael/gst-win && my_gst_libs="$my_gst_libs $i"
+      done
+
+      echo $my_gst_libs -lgst
+fi      
+
+if test "$echo_datadir" = "yes"; then
+      echo $pkgdatadir
+fi
+
+if test "$echo_libdir" = "yes"; then
+      echo $moduledir
+fi

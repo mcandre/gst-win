@@ -1,0 +1,18 @@
+prefix = /home/gwenael/gst-win
+exec_prefix = ${prefix}
+libdir = /home/gwenael/gst-win
+pkglibdir = ${libdir}/smalltalk
+datarootdir = ${prefix}/share
+datadir = ${datarootdir}
+pkgdatadir = ${datadir}/smalltalk
+moduledir = ${pkglibdir}
+includedir = ${prefix}/include
+
+Name: gnu-smalltalk
+Description: GNU Smalltalk
+Version: 3.2.90
+Requires.private: libffi
+Libs: -L${libdir} -lgst
+Libs.private: -lm    -lltdl  
+Cflags: -I${includedir}
+
