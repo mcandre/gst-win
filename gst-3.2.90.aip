@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="9.4" version="9.4" Modules="simple" RootPath="." Language="en" Id="{212C41BA-9564-41A8-B131-D59F33DF6725}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiValidationComponent">
+    <ROW Table="File" Column="Sequence" MinValue="1" MaxValue="32767" Description="Sequence with respect to the media images; order must track cabinet order." Options="0" ColumnType="2" ColumnIndex="7" ColumnSize="2" MsiKey="File#Sequence"/>
+    <ROW Table="Media" Column="LastSequence" MinValue="0" MaxValue="32767" Description="File sequence number for the last file for this media." Options="0" ColumnType="2" ColumnIndex="1" ColumnSize="2" MsiKey="Media#LastSequence"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="gst.exe" Type="8"/>
+    <ROW Property="ARPURLINFOABOUT" Value="http://smalltalk.gnu.org/"/>
+    <ROW Property="Manufacturer" Value="GNU" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="1033:{7285BE4E-FEE6-47C8-86EA-1E6BFB7A330E} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="GNU Smalltalk" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="3.2.90" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{65362F72-7F61-4C7E-A231-3F59E7B8CABB}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="aclocal_Dir" Directory_Parent="share_Dir" DefaultDir="aclocal"/>
+    <ROW Directory="examples_Dir" Directory_Parent="smalltalk_1_Dir" DefaultDir="examples"/>
+    <ROW Directory="include_Dir" Directory_Parent="APPDIR" DefaultDir="include"/>
+    <ROW Directory="kernel_Dir" Directory_Parent="smalltalk_1_Dir" DefaultDir="kernel"/>
+    <ROW Directory="libexec_Dir" Directory_Parent="APPDIR" DefaultDir="libexec"/>
+    <ROW Directory="pkgconfig_Dir" Directory_Parent="APPDIR" DefaultDir="pkgcon~1|pkgconfig"/>
+    <ROW Directory="scripts_Dir" Directory_Parent="smalltalk_1_Dir" DefaultDir="scripts"/>
+    <ROW Directory="share_Dir" Directory_Parent="APPDIR" DefaultDir="share"/>
+    <ROW Directory="smalltalk_1_Dir" Directory_Parent="share_Dir" DefaultDir="smallt~1|smalltalk"/>
+    <ROW Directory="smalltalk_2_Dir" Directory_Parent="APPDIR" DefaultDir="smallt~1|smalltalk"/>
+    <ROW Directory="smalltalk_Dir" Directory_Parent="libexec_Dir" DefaultDir="smallt~1|smalltalk"/>
+    <ROW Directory="unsupported_Dir" Directory_Parent="smalltalk_1_Dir" DefaultDir="unsupp~1|unsupported"/>
+    <ROW Directory="vfs_Dir" Directory_Parent="smalltalk_Dir" DefaultDir="vfs"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AbstNamespc.st" ComponentId="{E557529F-E4B2-42BE-AC9E-FDA4438D7244}" Directory_="kernel_Dir" Attributes="0" KeyPath="AbstNamespc.st" Type="0"/>
+    <ROW Component="Announcements.star" ComponentId="{2376C236-A835-4268-9DFC-9C27484E1EF0}" Directory_="smalltalk_1_Dir" Attributes="0" KeyPath="Announcements.star" Type="0"/>
+    <ROW Component="Bench.st" ComponentId="{B648F060-04A6-49C9-8A05-40F2C363EC00}" Directory_="examples_Dir" Attributes="0" KeyPath="Bench.st" Type="0"/>
+    <ROW Component="CParseTypetest.st" ComponentId="{C808185A-137C-4915-9B8F-D5EF3E56F65F}" Directory_="unsupported_Dir" Attributes="0" KeyPath="CParseTypetest.st" Type="0"/>
+    <ROW Component="Convert.st" ComponentId="{6B0C5B67-24EA-4EDD-8BFC-71F996C92FA7}" Directory_="scripts_Dir" Attributes="0" KeyPath="Convert.st" Type="0"/>
+    <ROW Component="ProductInformation" ComponentId="{C545A7E1-4028-49FE-BB86-2DBF2D6F93C8}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="deb" ComponentId="{50EDC002-559B-46D9-9E5E-D1389F47DFEB}" Directory_="vfs_Dir" Attributes="0" KeyPath="deb" Type="0"/>
+    <ROW Component="digest.a" ComponentId="{E9B3F3FE-B725-42EE-9F48-C331CB6D1225}" Directory_="smalltalk_2_Dir" Attributes="0" KeyPath="digest.a" Type="0"/>
+    <ROW Component="digest3290.dll" ComponentId="{8EE84A8D-8F0E-4693-9CAF-A1EBA4A743A1}" Directory_="smalltalk_2_Dir" Attributes="0" KeyPath="digest3290.dll"/>
+    <ROW Component="expat3290.dll" ComponentId="{160B3016-958A-45ED-9889-1D73B1E217B3}" Directory_="smalltalk_2_Dir" Attributes="0" KeyPath="expat3290.dll"/>
+    <ROW Component="gnusmalltalk.pc" ComponentId="{C6A50A71-661D-4A5B-BB50-5A74A11BEB74}" Directory_="pkgconfig_Dir" Attributes="0" KeyPath="gnusmalltalk.pc" Type="0"/>
+    <ROW Component="gnutlswrapper.exe" ComponentId="{E72C0BFB-4B99-4185-8535-EB41494735E2}" Directory_="smalltalk_Dir" Attributes="0" KeyPath="gnutlswrapper.exe"/>
+    <ROW Component="gst.exe" ComponentId="{2F7549B3-4A11-4443-9DDB-B39D56D70F51}" Directory_="APPDIR" Attributes="0" KeyPath="gst.exe"/>
+    <ROW Component="gstblox.exe" ComponentId="{837D5C58-A0A4-4075-9E9E-5A2641A33B48}" Directory_="APPDIR" Attributes="0" KeyPath="gstblox.exe"/>
+    <ROW Component="gstbrowser.exe" ComponentId="{176C9567-4F4E-41B7-BD66-FE682A3A52B8}" Directory_="APPDIR" Attributes="0" KeyPath="gstbrowser.exe"/>
+    <ROW Component="gstconfig" ComponentId="{E6DEAA48-4E8C-434F-BE34-88AF71C19AF6}" Directory_="APPDIR" Attributes="0" KeyPath="gstconfig" Type="0"/>
+    <ROW Component="gstconvert.exe" ComponentId="{47A7F3CF-E521-4E4E-BAD3-E7BBA9169D54}" Directory_="APPDIR" Attributes="0" KeyPath="gstconvert.exe"/>
+    <ROW Component="gstdoc.exe" ComponentId="{06459DEE-312B-4BD0-B723-F8BD36B26FD7}" Directory_="APPDIR" Attributes="0" KeyPath="gstdoc.exe"/>
+    <ROW Component="gstglib3290.dll" ComponentId="{E456DE37-CEDD-452B-BC9C-C8B133895074}" Directory_="smalltalk_2_Dir" Attributes="0" KeyPath="gstglib3290.dll"/>
+    <ROW Component="gstgobject.h" ComponentId="{1EE4FAA1-0BBA-48CC-AAF2-CAD0C72ABCCE}" Directory_="include_Dir" Attributes="0" KeyPath="gstgobject.h" Type="0"/>
+    <ROW Component="gstgtk3290.dll" ComponentId="{663C6675-EED5-4EEF-95FD-F38EEE6C612F}" Directory_="smalltalk_2_Dir" Attributes="0" KeyPath="gstgtk3290.dll"/>
+    <ROW Component="gstload.exe" ComponentId="{728C6BF1-689B-4516-81F0-5E04A6D9D99C}" Directory_="APPDIR" Attributes="0" KeyPath="gstload.exe"/>
+    <ROW Component="gstopengl3290.dll" ComponentId="{1FE5299C-49AB-4934-BE5D-8D821C0EED8F}" Directory_="smalltalk_2_Dir" Attributes="0" KeyPath="gstopengl3290.dll"/>
+    <ROW Component="gstpackage.exe" ComponentId="{53FBEE19-1332-4DCC-9D47-0B073B351E3D}" Directory_="APPDIR" Attributes="0" KeyPath="gstpackage.exe"/>
+    <ROW Component="gstpackage.m4" ComponentId="{08798B64-3AF6-405B-AC3D-4E78F41426C3}" Directory_="aclocal_Dir" Attributes="0" KeyPath="gstpackage.m4" Type="0"/>
+    <ROW Component="gstprofile.exe" ComponentId="{B8B41733-8713-4F9D-8D35-75B904E396C6}" Directory_="APPDIR" Attributes="0" KeyPath="gstprofile.exe"/>
+    <ROW Component="gstreload.exe" ComponentId="{F24BF0D2-1FE3-4CDD-9D6D-F10B7AFBB638}" Directory_="APPDIR" Attributes="0" KeyPath="gstreload.exe"/>
+    <ROW Component="gstremote.exe" ComponentId="{6238F490-B096-498A-9E64-D62530E226E1}" Directory_="APPDIR" Attributes="0" KeyPath="gstremote.exe"/>
+    <ROW Component="gstsunit.exe" ComponentId="{99A215E8-B9DD-41D6-9013-3013695C4564}" Directory_="APPDIR" Attributes="0" KeyPath="gstsunit.exe"/>
+    <ROW Component="iconv3290.dll" ComponentId="{D8063A9F-A004-44CC-9DBA-6A3298675DD1}" Directory_="smalltalk_2_Dir" Attributes="0" KeyPath="iconv3290.dll"/>
+    <ROW Component="libdl.dll" ComponentId="{DADF3B13-7D68-4724-98DB-51421206F3FC}" Directory_="APPDIR" Attributes="0" KeyPath="libdl.dll"/>
+    <ROW Component="libffi5.dll" ComponentId="{93BFB13E-9D80-4A6F-BCE7-361EBDE18AE6}" Directory_="APPDIR" Attributes="0" KeyPath="libffi5.dll"/>
+    <ROW Component="libgst7.dll" ComponentId="{58FB4260-1431-4592-9392-BFDD6071E70E}" Directory_="APPDIR" Attributes="0" KeyPath="libgst7.dll"/>
+    <ROW Component="libgstgobject1.dll" ComponentId="{3F435EB2-8056-42B6-9698-EDECEB081C97}" Directory_="APPDIR" Attributes="0" KeyPath="libgstgobject1.dll"/>
+    <ROW Component="libltdl7.dll" ComponentId="{6D414A9B-2820-485B-AC23-76A9C936B0ED}" Directory_="APPDIR" Attributes="0" KeyPath="libltdl7.dll"/>
+    <ROW Component="sdl3290.dll" ComponentId="{5CD97EF7-0465-4058-AB6F-9C8456732496}" Directory_="smalltalk_2_Dir" Attributes="0" KeyPath="sdl3290.dll"/>
+    <ROW Component="zlib3290.dll" ComponentId="{43BB47A5-05D9-4A00-87BE-41E0F3AA1742}" Directory_="smalltalk_2_Dir" Attributes="0" KeyPath="zlib3290.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AbstNamespc.st Announcements.star Bench.st CParseTypetest.st Convert.st ProductInformation deb digest.a digest3290.dll expat3290.dll gnusmalltalk.pc gnutlswrapper.exe gst.exe gstblox.exe gstbrowser.exe gstconfig gstconvert.exe gstdoc.exe gstglib3290.dll gstgobject.h gstgtk3290.dll gstload.exe gstopengl3290.dll gstpackage.exe gstpackage.m4 gstprofile.exe gstreload.exe gstremote.exe gstsunit.exe iconv3290.dll libdl.dll libffi5.dll libgst7.dll libgstgobject1.dll libltdl7.dll sdl3290.dll zlib3290.dll"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AbstNamespc.st" Component_="AbstNamespc.st" FileName="AbstNa~1.st|AbstNamespc.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\AbstNamespc.st" SelfReg="false" NextFile="AnsiDates.st"/>
+    <ROW File="Announcements.star" Component_="Announcements.star" FileName="Announ~1.sta|Announcements.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Announcements.star" SelfReg="false" NextFile="Blox.star"/>
+    <ROW File="AnsiDates.st" Component_="AbstNamespc.st" FileName="AnsiDa~1.st|AnsiDates.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\AnsiDates.st" SelfReg="false" NextFile="Array.st"/>
+    <ROW File="Array.st" Component_="AbstNamespc.st" FileName="Array.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Array.st" SelfReg="false" NextFile="ArrayColl.st"/>
+    <ROW File="ArrayColl.st" Component_="AbstNamespc.st" FileName="ArrayC~1.st|ArrayColl.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\ArrayColl.st" SelfReg="false" NextFile="Association.st"/>
+    <ROW File="Association.st" Component_="AbstNamespc.st" FileName="Associ~1.st|Association.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Association.st" SelfReg="false" NextFile="Autoload.st"/>
+    <ROW File="Autoload.st" Component_="AbstNamespc.st" FileName="Autoload.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Autoload.st" SelfReg="false" NextFile="Bag.st"/>
+    <ROW File="BLOXBrowser.star" Component_="Announcements.star" FileName="BLOXBr~1.sta|BLOXBrowser.star" Attributes="0" SourcePath="gst-win\share\smalltalk\BLOXBrowser.star" SelfReg="false" NextFile="BloxGTK.star"/>
+    <ROW File="Bag.st" Component_="AbstNamespc.st" FileName="Bag.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Bag.st" SelfReg="false" NextFile="Behavior.st"/>
+    <ROW File="Behavior.st" Component_="AbstNamespc.st" FileName="Behavior.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Behavior.st" SelfReg="false" NextFile="BindingDict.st"/>
+    <ROW File="Bench.st" Component_="Bench.st" FileName="Bench.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Bench.st" SelfReg="false" NextFile="CairoBlit.st"/>
+    <ROW File="BindingDict.st" Component_="AbstNamespc.st" FileName="Bindin~1.st|BindingDict.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\BindingDict.st" SelfReg="false" NextFile="BlkClosure.st"/>
+    <ROW File="BlkClosure.st" Component_="AbstNamespc.st" FileName="BlkClo~1.st|BlkClosure.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\BlkClosure.st" SelfReg="false" NextFile="BlkContext.st"/>
+    <ROW File="BlkContext.st" Component_="AbstNamespc.st" FileName="BlkCon~1.st|BlkContext.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\BlkContext.st" SelfReg="false" NextFile="Boolean.st"/>
+    <ROW File="Blox.star" Component_="Announcements.star" FileName="Blox~1.sta|Blox.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Blox.star" SelfReg="false" NextFile="BLOXBrowser.star"/>
+    <ROW File="BloxGTK.star" Component_="Announcements.star" FileName="BloxGT~1.sta|BloxGTK.star" Attributes="0" SourcePath="gst-win\share\smalltalk\BloxGTK.star" SelfReg="false" NextFile="Cairo.star"/>
+    <ROW File="Boolean.st" Component_="AbstNamespc.st" FileName="Boolean.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Boolean.st" SelfReg="false" NextFile="Builtins.st"/>
+    <ROW File="Builtins.st" Component_="AbstNamespc.st" FileName="Builtins.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Builtins.st" SelfReg="false" NextFile="ByteArray.st"/>
+    <ROW File="ByteArray.st" Component_="AbstNamespc.st" FileName="ByteAr~1.st|ByteArray.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\ByteArray.st" SelfReg="false" NextFile="CallinProcess.st"/>
+    <ROW File="CCallable.st" Component_="AbstNamespc.st" FileName="CCalla~1.st|CCallable.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\CCallable.st" SelfReg="false" NextFile="CCallback.st"/>
+    <ROW File="CCallback.st" Component_="AbstNamespc.st" FileName="CCallb~1.st|CCallback.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\CCallback.st" SelfReg="false" NextFile="CFuncs.st"/>
+    <ROW File="CFuncs.st" Component_="AbstNamespc.st" FileName="CFuncs.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\CFuncs.st" SelfReg="false" NextFile="Character.st"/>
+    <ROW File="CObject.st" Component_="AbstNamespc.st" FileName="CObject.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\CObject.st" SelfReg="false" NextFile="Collection.st"/>
+    <ROW File="CPPtest.st" Component_="CParseTypetest.st" FileName="CPP-test.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\CPP-test.st" SelfReg="false" NextFile="CString.st"/>
+    <ROW File="CParseTypetest.st" Component_="CParseTypetest.st" FileName="CParse~1.st|CParseType-test.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\CParseType-test.st" SelfReg="false" NextFile="CPPtest.st"/>
+    <ROW File="CParser.star" Component_="Announcements.star" FileName="CParse~1.sta|CParser.star" Attributes="0" SourcePath="gst-win\share\smalltalk\CParser.star" SelfReg="false" NextFile="DBDMySQL.star"/>
+    <ROW File="CString.st" Component_="CParseTypetest.st" FileName="CString.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\CString.st" SelfReg="false" NextFile="DLD.st_1"/>
+    <ROW File="CStruct.st" Component_="AbstNamespc.st" FileName="CStruct.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\CStruct.st" SelfReg="false" NextFile="CType.st"/>
+    <ROW File="CType.st" Component_="AbstNamespc.st" FileName="CType.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\CType.st" SelfReg="false" NextFile="Date.st"/>
+    <ROW File="Cairo.star" Component_="Announcements.star" FileName="Cairo~1.sta|Cairo.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Cairo.star" SelfReg="false" NextFile="CairoSDL.star"/>
+    <ROW File="CairoBlit.st" Component_="Bench.st" FileName="CairoB~1.st|CairoBlit.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\CairoBlit.st" SelfReg="false" NextFile="CairoDemo.st"/>
+    <ROW File="CairoDemo.st" Component_="Bench.st" FileName="CairoD~1.st|CairoDemo.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\CairoDemo.st" SelfReg="false" NextFile="Case.st"/>
+    <ROW File="CairoSDL.star" Component_="Announcements.star" FileName="CairoS~1.sta|CairoSDL.star" Attributes="0" SourcePath="gst-win\share\smalltalk\CairoSDL.star" SelfReg="false" NextFile="ClassPublisher.star"/>
+    <ROW File="CallinProcess.st" Component_="AbstNamespc.st" FileName="Callin~1.st|CallinProcess.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\CallinProcess.st" SelfReg="false" NextFile="CCallable.st"/>
+    <ROW File="Case.st" Component_="Bench.st" FileName="Case.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Case.st" SelfReg="false" NextFile="DeltaBlue.st"/>
+    <ROW File="CharArray.st" Component_="AbstNamespc.st" FileName="CharAr~1.st|CharArray.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\CharArray.st" SelfReg="false" NextFile="Class.st"/>
+    <ROW File="Character.st" Component_="AbstNamespc.st" FileName="Charac~1.st|Character.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Character.st" SelfReg="false" NextFile="CharArray.st"/>
+    <ROW File="Class.st" Component_="AbstNamespc.st" FileName="Class.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Class.st" SelfReg="false" NextFile="ClassDesc.st"/>
+    <ROW File="ClassDesc.st" Component_="AbstNamespc.st" FileName="ClassD~1.st|ClassDesc.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\ClassDesc.st" SelfReg="false" NextFile="CObject.st"/>
+    <ROW File="ClassPublisher.star" Component_="Announcements.star" FileName="ClassP~1.sta|ClassPublisher.star" Attributes="0" SourcePath="gst-win\share\smalltalk\ClassPublisher.star" SelfReg="false" NextFile="Compiler.star"/>
+    <ROW File="Collection.st" Component_="AbstNamespc.st" FileName="Collec~1.st|Collection.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Collection.st" SelfReg="false" NextFile="CompildCode.st"/>
+    <ROW File="CompildCode.st" Component_="AbstNamespc.st" FileName="Compil~1.st|CompildCode.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\CompildCode.st" SelfReg="false" NextFile="CompildMeth.st"/>
+    <ROW File="CompildMeth.st" Component_="AbstNamespc.st" FileName="Compil~2.st|CompildMeth.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\CompildMeth.st" SelfReg="false" NextFile="CompiledBlk.st"/>
+    <ROW File="CompiledBlk.st" Component_="AbstNamespc.st" FileName="Compil~3.st|CompiledBlk.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\CompiledBlk.st" SelfReg="false" NextFile="ContextPart.st"/>
+    <ROW File="Compiler.star" Component_="Announcements.star" FileName="Compil~1.sta|Compiler.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Compiler.star" SelfReg="false" NextFile="Complex.star"/>
+    <ROW File="Complex.star" Component_="Announcements.star" FileName="Comple~1.sta|Complex.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Complex.star" SelfReg="false" NextFile="Continuations.star"/>
+    <ROW File="ContextPart.st" Component_="AbstNamespc.st" FileName="Contex~1.st|ContextPart.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\ContextPart.st" SelfReg="false" NextFile="Continuation.st"/>
+    <ROW File="Continuation.st" Component_="AbstNamespc.st" FileName="Contin~1.st|Continuation.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Continuation.st" SelfReg="false" NextFile="CStruct.st"/>
+    <ROW File="Continuations.star" Component_="Announcements.star" FileName="Contin~1.sta|Continuations.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Continuations.star" SelfReg="false" NextFile="CParser.star"/>
+    <ROW File="Convert.st" Component_="Convert.st" FileName="Convert.st" Attributes="0" SourcePath="gst-win\share\smalltalk\scripts\Convert.st" SelfReg="false" NextFile="GenDoc.st"/>
+    <ROW File="DBDMySQL.star" Component_="Announcements.star" FileName="DBD-My~1.sta|DBD-MySQL.star" Attributes="0" SourcePath="gst-win\share\smalltalk\DBD-MySQL.star" SelfReg="false" NextFile="DBI.star"/>
+    <ROW File="DBI.star" Component_="Announcements.star" FileName="DBI~1.sta|DBI.star" Attributes="0" SourcePath="gst-win\share\smalltalk\DBI.star" SelfReg="false" NextFile="DebugTools.star"/>
+    <ROW File="DLD.st" Component_="AbstNamespc.st" FileName="DLD.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\DLD.st" SelfReg="false" NextFile="DynVariable.st"/>
+    <ROW File="DLD.st_1" Component_="CParseTypetest.st" FileName="DLD.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\DLD.st" SelfReg="false" NextFile="echo.st"/>
+    <ROW File="Date.st" Component_="AbstNamespc.st" FileName="Date.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Date.st" SelfReg="false" NextFile="DeferBinding.st"/>
+    <ROW File="DebugTools.star" Component_="Announcements.star" FileName="DebugT~1.sta|DebugTools.star" Attributes="0" SourcePath="gst-win\share\smalltalk\DebugTools.star" SelfReg="false" NextFile="DhbNumericalMethods.star"/>
+    <ROW File="DeferBinding.st" Component_="AbstNamespc.st" FileName="DeferB~1.st|DeferBinding.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\DeferBinding.st" SelfReg="false" NextFile="Delay.st"/>
+    <ROW File="Delay.st" Component_="AbstNamespc.st" FileName="Delay.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Delay.st" SelfReg="false" NextFile="Dictionary.st"/>
+    <ROW File="DeltaBlue.st" Component_="Bench.st" FileName="DeltaB~1.st|DeltaBlue.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\DeltaBlue.st" SelfReg="false" NextFile="Dinner.st"/>
+    <ROW File="DhbNumericalMethods.star" Component_="Announcements.star" FileName="DhbNum~1.sta|DhbNumericalMethods.star" Attributes="0" SourcePath="gst-win\share\smalltalk\DhbNumericalMethods.star" SelfReg="false" NextFile="Digest.star"/>
+    <ROW File="Dictionary.st" Component_="AbstNamespc.st" FileName="Dictio~1.st|Dictionary.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Dictionary.st" SelfReg="false" NextFile="Directory.st"/>
+    <ROW File="Digest.star" Component_="Announcements.star" FileName="Digest~1.sta|Digest.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Digest.star" SelfReg="false" NextFile="Bench.st"/>
+    <ROW File="Dinner.st" Component_="Bench.st" FileName="Dinner.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Dinner.st" SelfReg="false" NextFile="EditStream.st"/>
+    <ROW File="DirMessage.st" Component_="AbstNamespc.st" FileName="DirMes~1.st|DirMessage.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\DirMessage.st" SelfReg="false" NextFile="DLD.st"/>
+    <ROW File="Directory.st" Component_="AbstNamespc.st" FileName="Direct~1.st|Directory.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Directory.st" SelfReg="false" NextFile="DirMessage.st"/>
+    <ROW File="DynVariable.st" Component_="AbstNamespc.st" FileName="DynVar~1.st|DynVariable.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\DynVariable.st" SelfReg="false" NextFile="ExcHandling.st"/>
+    <ROW File="EditStream.st" Component_="Bench.st" FileName="EditSt~1.st|EditStream.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\EditStream.st" SelfReg="false" NextFile="Gen2.st"/>
+    <ROW File="ExcHandling.st" Component_="AbstNamespc.st" FileName="ExcHan~1.st|ExcHandling.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\ExcHandling.st" SelfReg="false" NextFile="False.st"/>
+    <ROW File="False.st" Component_="AbstNamespc.st" FileName="False.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\False.st" SelfReg="false" NextFile="File.st"/>
+    <ROW File="File.st" Component_="AbstNamespc.st" FileName="File.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\File.st" SelfReg="false" NextFile="FileDescr.st"/>
+    <ROW File="FileDescr.st" Component_="AbstNamespc.st" FileName="FileDe~1.st|FileDescr.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\FileDescr.st" SelfReg="false" NextFile="FilePath.st"/>
+    <ROW File="FilePath.st" Component_="AbstNamespc.st" FileName="FilePath.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\FilePath.st" SelfReg="false" NextFile="FileSegment.st"/>
+    <ROW File="FileSegment.st" Component_="AbstNamespc.st" FileName="FileSe~1.st|FileSegment.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\FileSegment.st" SelfReg="false" NextFile="FileStream.st"/>
+    <ROW File="FileStream.st" Component_="AbstNamespc.st" FileName="FileSt~1.st|FileStream.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\FileStream.st" SelfReg="false" NextFile="Float.st"/>
+    <ROW File="Float.st" Component_="AbstNamespc.st" FileName="Float.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Float.st" SelfReg="false" NextFile="FloatD.st"/>
+    <ROW File="FloatD.st" Component_="AbstNamespc.st" FileName="FloatD.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\FloatD.st" SelfReg="false" NextFile="FloatE.st"/>
+    <ROW File="FloatE.st" Component_="AbstNamespc.st" FileName="FloatE.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\FloatE.st" SelfReg="false" NextFile="FloatQ.st"/>
+    <ROW File="FloatQ.st" Component_="AbstNamespc.st" FileName="FloatQ.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\FloatQ.st" SelfReg="false" NextFile="Fraction.st"/>
+    <ROW File="Fraction.st" Component_="AbstNamespc.st" FileName="Fraction.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Fraction.st" SelfReg="false" NextFile="Generator.st"/>
+    <ROW File="GLib.star" Component_="Announcements.star" FileName="GLib~1.sta|GLib.star" Attributes="0" SourcePath="gst-win\share\smalltalk\GLib.star" SelfReg="false" NextFile="Glorp.star"/>
+    <ROW File="GNUPlot.star" Component_="Announcements.star" FileName="GNUPlo~1.sta|GNUPlot.star" Attributes="0" SourcePath="gst-win\share\smalltalk\GNUPlot.star" SelfReg="false" NextFile="GTK.star"/>
+    <ROW File="GTK.star" Component_="Announcements.star" FileName="GTK~1.sta|GTK.star" Attributes="0" SourcePath="gst-win\share\smalltalk\GTK.star" SelfReg="false" NextFile="Iconv.star"/>
+    <ROW File="Gen2.st" Component_="Bench.st" FileName="Gen2.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Gen2.st" SelfReg="false" NextFile="Gen3.st"/>
+    <ROW File="Gen3.st" Component_="Bench.st" FileName="Gen3.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Gen3.st" SelfReg="false" NextFile="GenClasses.st"/>
+    <ROW File="GenClasses.st" Component_="Bench.st" FileName="GenCla~1.st|GenClasses.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\GenClasses.st" SelfReg="false" NextFile="JSON.st"/>
+    <ROW File="GenDoc.st" Component_="Convert.st" FileName="GenDoc.st" Attributes="0" SourcePath="gst-win\share\smalltalk\scripts\GenDoc.st" SelfReg="false" NextFile="Load.st"/>
+    <ROW File="Generator.st" Component_="AbstNamespc.st" FileName="Genera~1.st|Generator.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Generator.st" SelfReg="false" NextFile="Getopt.st"/>
+    <ROW File="Getopt.st" Component_="AbstNamespc.st" FileName="Getopt.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Getopt.st" SelfReg="false" NextFile="HashedColl.st"/>
+    <ROW File="Glorp.star" Component_="Announcements.star" FileName="Glorp~1.sta|Glorp.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Glorp.star" SelfReg="false" NextFile="GNUPlot.star"/>
+    <ROW File="HashedColl.st" Component_="AbstNamespc.st" FileName="Hashed~1.st|HashedColl.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\HashedColl.st" SelfReg="false" NextFile="HomedAssoc.st"/>
+    <ROW File="HomedAssoc.st" Component_="AbstNamespc.st" FileName="HomedA~1.st|HomedAssoc.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\HomedAssoc.st" SelfReg="false" NextFile="IdentDict.st"/>
+    <ROW File="Iconv.star" Component_="Announcements.star" FileName="Iconv~1.sta|Iconv.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Iconv.star" SelfReg="false" NextFile="Java.star"/>
+    <ROW File="IdentDict.st" Component_="AbstNamespc.st" FileName="IdentD~1.st|IdentDict.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\IdentDict.st" SelfReg="false" NextFile="IdentitySet.st"/>
+    <ROW File="IdentitySet.st" Component_="AbstNamespc.st" FileName="Identi~1.st|IdentitySet.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\IdentitySet.st" SelfReg="false" NextFile="Integer.st"/>
+    <ROW File="Integer.st" Component_="AbstNamespc.st" FileName="Integer.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Integer.st" SelfReg="false" NextFile="Interval.st"/>
+    <ROW File="Interr.st" Component_="CParseTypetest.st" FileName="Interr.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\Interr.st" SelfReg="false" NextFile="market.st"/>
+    <ROW File="Interval.st" Component_="AbstNamespc.st" FileName="Interval.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Interval.st" SelfReg="false" NextFile="Iterable.st"/>
+    <ROW File="Iterable.st" Component_="AbstNamespc.st" FileName="Iterable.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Iterable.st" SelfReg="false" NextFile="LargeInt.st"/>
+    <ROW File="JSON.st" Component_="Bench.st" FileName="JSON.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\JSON.st" SelfReg="false" NextFile="LazyCollection.st"/>
+    <ROW File="Java.star" Component_="Announcements.star" FileName="Java~1.sta|Java.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Java.star" SelfReg="false" NextFile="AbstNamespc.st"/>
+    <ROW File="LargeInt.st" Component_="AbstNamespc.st" FileName="LargeInt.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\LargeInt.st" SelfReg="false" NextFile="Link.st"/>
+    <ROW File="LazyCollection.st" Component_="Bench.st" FileName="LazyCo~1.st|LazyCollection.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\LazyCollection.st" SelfReg="false" NextFile="Lisp.st"/>
+    <ROW File="LibSDL.star" Component_="Announcements.star" FileName="LibSDL~1.sta|LibSDL.star" Attributes="0" SourcePath="gst-win\share\smalltalk\LibSDL.star" SelfReg="false" NextFile="LibSDL_GL.star"/>
+    <ROW File="LibSDL_GL.star" Component_="Announcements.star" FileName="LibSDL~2.sta|LibSDL_GL.star" Attributes="0" SourcePath="gst-win\share\smalltalk\LibSDL_GL.star" SelfReg="false" NextFile="LibSDL_image.star"/>
+    <ROW File="LibSDL_image.star" Component_="Announcements.star" FileName="LibSDL~3.sta|LibSDL_image.star" Attributes="0" SourcePath="gst-win\share\smalltalk\LibSDL_image.star" SelfReg="false" NextFile="LibSDL_mixer.star"/>
+    <ROW File="LibSDL_mixer.star" Component_="Announcements.star" FileName="LibSDL~4.sta|LibSDL_mixer.star" Attributes="0" SourcePath="gst-win\share\smalltalk\LibSDL_mixer.star" SelfReg="false" NextFile="MagritteSeaside.star"/>
+    <ROW File="Link.st" Component_="AbstNamespc.st" FileName="Link.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Link.st" SelfReg="false" NextFile="LinkedList.st"/>
+    <ROW File="LinkedList.st" Component_="AbstNamespc.st" FileName="Linked~1.st|LinkedList.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\LinkedList.st" SelfReg="false" NextFile="LookupKey.st"/>
+    <ROW File="Lisp.st" Component_="Bench.st" FileName="Lisp.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Lisp.st" SelfReg="false" NextFile="Man.st"/>
+    <ROW File="Load.st" Component_="Convert.st" FileName="Load.st" Attributes="0" SourcePath="gst-win\share\smalltalk\scripts\Load.st" SelfReg="false" NextFile="Package.st"/>
+    <ROW File="LookupKey.st" Component_="AbstNamespc.st" FileName="Lookup~1.st|LookupKey.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\LookupKey.st" SelfReg="false" NextFile="LookupTable.st"/>
+    <ROW File="LookupTable.st" Component_="AbstNamespc.st" FileName="Lookup~2.st|LookupTable.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\LookupTable.st" SelfReg="false" NextFile="Magnitude.st"/>
+    <ROW File="Magnitude.st" Component_="AbstNamespc.st" FileName="Magnit~1.st|Magnitude.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Magnitude.st" SelfReg="false" NextFile="MappedColl.st"/>
+    <ROW File="Magritte.star" Component_="Announcements.star" FileName="Magrit~2.sta|Magritte.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Magritte.star" SelfReg="false" NextFile="NetClients.star"/>
+    <ROW File="MagritteSeaside.star" Component_="Announcements.star" FileName="Magrit~1.sta|Magritte-Seaside.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Magritte-Seaside.star" SelfReg="false" NextFile="Magritte.star"/>
+    <ROW File="Man.st" Component_="Bench.st" FileName="Man.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Man.st" SelfReg="false" NextFile="MemUsage.st"/>
+    <ROW File="MappedColl.st" Component_="AbstNamespc.st" FileName="Mapped~1.st|MappedColl.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\MappedColl.st" SelfReg="false" NextFile="Memory.st"/>
+    <ROW File="MemUsage.st" Component_="Bench.st" FileName="MemUsage.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\MemUsage.st" SelfReg="false" NextFile="Methods.st"/>
+    <ROW File="Memory.st" Component_="AbstNamespc.st" FileName="Memory.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Memory.st" SelfReg="false" NextFile="Message.st"/>
+    <ROW File="Message.st" Component_="AbstNamespc.st" FileName="Message.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Message.st" SelfReg="false" NextFile="MessageLookup.st"/>
+    <ROW File="MessageLookup.st" Component_="AbstNamespc.st" FileName="Messag~1.st|MessageLookup.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\MessageLookup.st" SelfReg="false" NextFile="Metaclass.st"/>
+    <ROW File="Metaclass.st" Component_="AbstNamespc.st" FileName="Metacl~1.st|Metaclass.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Metaclass.st" SelfReg="false" NextFile="MethodDict.st"/>
+    <ROW File="MethodDict.st" Component_="AbstNamespc.st" FileName="Method~1.st|MethodDict.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\MethodDict.st" SelfReg="false" NextFile="MethodInfo.st"/>
+    <ROW File="MethodInfo.st" Component_="AbstNamespc.st" FileName="Method~2.st|MethodInfo.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\MethodInfo.st" SelfReg="false" NextFile="MthContext.st"/>
+    <ROW File="Methods.st" Component_="Bench.st" FileName="Methods.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Methods.st" SelfReg="false" NextFile="MiniDebugger.st"/>
+    <ROW File="MiniDebugger.st" Component_="Bench.st" FileName="MiniDe~1.st|MiniDebugger.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\MiniDebugger.st" SelfReg="false" NextFile="pepe.sed"/>
+    <ROW File="MthContext.st" Component_="AbstNamespc.st" FileName="MthCon~1.st|MthContext.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\MthContext.st" SelfReg="false" NextFile="Namespace.st"/>
+    <ROW File="Namespace.st" Component_="AbstNamespc.st" FileName="Namesp~1.st|Namespace.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Namespace.st" SelfReg="false" NextFile="Number.st"/>
+    <ROW File="NetClients.star" Component_="Announcements.star" FileName="NetCli~1.sta|NetClients.star" Attributes="0" SourcePath="gst-win\share\smalltalk\NetClients.star" SelfReg="false" NextFile="ObjectDumper.star"/>
+    <ROW File="Number.st" Component_="AbstNamespc.st" FileName="Number.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Number.st" SelfReg="false" NextFile="Object.st"/>
+    <ROW File="ObjMemory.st" Component_="AbstNamespc.st" FileName="ObjMem~1.st|ObjMemory.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\ObjMemory.st" SelfReg="false" NextFile="OrderColl.st"/>
+    <ROW File="Object.st" Component_="AbstNamespc.st" FileName="Object.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Object.st" SelfReg="false" NextFile="ObjMemory.st"/>
+    <ROW File="ObjectDumper.star" Component_="Announcements.star" FileName="Object~1.sta|ObjectDumper.star" Attributes="0" SourcePath="gst-win\share\smalltalk\ObjectDumper.star" SelfReg="false" NextFile="OpenGL.star"/>
+    <ROW File="OpenGL.star" Component_="Announcements.star" FileName="OpenGL~1.sta|OpenGL.star" Attributes="0" SourcePath="gst-win\share\smalltalk\OpenGL.star" SelfReg="false" NextFile="packages.xml"/>
+    <ROW File="OrderColl.st" Component_="AbstNamespc.st" FileName="OrderC~1.st|OrderColl.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\OrderColl.st" SelfReg="false" NextFile="OtherArrays.st"/>
+    <ROW File="OtherArrays.st" Component_="AbstNamespc.st" FileName="OtherA~1.st|OtherArrays.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\OtherArrays.st" SelfReg="false" NextFile="PkgLoader.st"/>
+    <ROW File="Package.st" Component_="Convert.st" FileName="Package.st" Attributes="0" SourcePath="gst-win\share\smalltalk\scripts\Package.st" SelfReg="false" NextFile="Profile.st"/>
+    <ROW File="Parser.star" Component_="Announcements.star" FileName="Parser~1.sta|Parser.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Parser.star" SelfReg="false" NextFile="ProfileTools.star"/>
+    <ROW File="PipeStream.st" Component_="Bench.st" FileName="PipeSt~1.st|PipeStream.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\PipeStream.st" SelfReg="false" NextFile="Prolog.st"/>
+    <ROW File="PkgLoader.st" Component_="AbstNamespc.st" FileName="PkgLoa~1.st|PkgLoader.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\PkgLoader.st" SelfReg="false" NextFile="Point.st"/>
+    <ROW File="Point.st" Component_="AbstNamespc.st" FileName="Point.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Point.st" SelfReg="false" NextFile="PosStream.st"/>
+    <ROW File="PosStream.st" Component_="AbstNamespc.st" FileName="PosStr~1.st|PosStream.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\PosStream.st" SelfReg="false" NextFile="ProcEnv.st"/>
+    <ROW File="ProcEnv.st" Component_="AbstNamespc.st" FileName="ProcEnv.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\ProcEnv.st" SelfReg="false" NextFile="Process.st"/>
+    <ROW File="ProcSched.st" Component_="AbstNamespc.st" FileName="ProcSc~1.st|ProcSched.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\ProcSched.st" SelfReg="false" NextFile="Random.st"/>
+    <ROW File="Process.st" Component_="AbstNamespc.st" FileName="Process.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Process.st" SelfReg="false" NextFile="ProcSched.st"/>
+    <ROW File="Process.st_1" Component_="CParseTypetest.st" FileName="Process.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\Process.st" SelfReg="false" NextFile="Profile.st_1"/>
+    <ROW File="Profile.st" Component_="Convert.st" FileName="Profile.st" Attributes="0" SourcePath="gst-win\share\smalltalk\scripts\Profile.st" SelfReg="false" NextFile="Remote.st"/>
+    <ROW File="Profile.st_1" Component_="CParseTypetest.st" FileName="Profile.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\Profile.st" SelfReg="false" NextFile="resolve.st"/>
+    <ROW File="ProfileTools.star" Component_="Announcements.star" FileName="Profil~1.sta|ProfileTools.star" Attributes="0" SourcePath="gst-win\share\smalltalk\ProfileTools.star" SelfReg="false" NextFile="ROE.star"/>
+    <ROW File="Prolog.st" Component_="Bench.st" FileName="Prolog.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Prolog.st" SelfReg="false" NextFile="PrtHier.st"/>
+    <ROW File="PrtHier.st" Component_="Bench.st" FileName="PrtHier.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\PrtHier.st" SelfReg="false" NextFile="Queens.st"/>
+    <ROW File="Queens.st" Component_="Bench.st" FileName="Queens.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Queens.st" SelfReg="false" NextFile="README"/>
+    <ROW File="README" Component_="Bench.st" FileName="README" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\README" SelfReg="false" NextFile="RegExp.st"/>
+    <ROW File="ROE.star" Component_="Announcements.star" FileName="ROE~1.sta|ROE.star" Attributes="0" SourcePath="gst-win\share\smalltalk\ROE.star" SelfReg="false" NextFile="SandstoneDb.star"/>
+    <ROW File="RWStream.st" Component_="AbstNamespc.st" FileName="RWStream.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\RWStream.st" SelfReg="false" NextFile="ScaledDec.st"/>
+    <ROW File="Random.st" Component_="AbstNamespc.st" FileName="Random.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Random.st" SelfReg="false" NextFile="ReadStream.st"/>
+    <ROW File="ReadStream.st" Component_="AbstNamespc.st" FileName="ReadSt~1.st|ReadStream.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\ReadStream.st" SelfReg="false" NextFile="Rectangle.st"/>
+    <ROW File="Rectangle.st" Component_="AbstNamespc.st" FileName="Rectan~1.st|Rectangle.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Rectangle.st" SelfReg="false" NextFile="RecursionLock.st"/>
+    <ROW File="RecursionLock.st" Component_="AbstNamespc.st" FileName="Recurs~1.st|RecursionLock.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\RecursionLock.st" SelfReg="false" NextFile="Regex.st"/>
+    <ROW File="RegExp.st" Component_="Bench.st" FileName="RegExp.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\RegExp.st" SelfReg="false" NextFile="Richards.st"/>
+    <ROW File="Regex.st" Component_="AbstNamespc.st" FileName="Regex.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Regex.st" SelfReg="false" NextFile="RootNamespc.st"/>
+    <ROW File="Remote.st" Component_="Convert.st" FileName="Remote.st" Attributes="0" SourcePath="gst-win\share\smalltalk\scripts\Remote.st" SelfReg="false" NextFile="Test.st"/>
+    <ROW File="Richards.st" Component_="Bench.st" FileName="Richards.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Richards.st" SelfReg="false" NextFile="shell"/>
+    <ROW File="RootNamespc.st" Component_="AbstNamespc.st" FileName="RootNa~1.st|RootNamespc.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\RootNamespc.st" SelfReg="false" NextFile="RunArray.st"/>
+    <ROW File="RunArray.st" Component_="AbstNamespc.st" FileName="RunArray.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\RunArray.st" SelfReg="false" NextFile="RWStream.st"/>
+    <ROW File="SUnit.star" Component_="Announcements.star" FileName="SUnit~1.sta|SUnit.star" Attributes="0" SourcePath="gst-win\share\smalltalk\SUnit.star" SelfReg="false" NextFile="Swazoo.star"/>
+    <ROW File="SandstoneDb.star" Component_="Announcements.star" FileName="Sandst~1.sta|SandstoneDb.star" Attributes="0" SourcePath="gst-win\share\smalltalk\SandstoneDb.star" SelfReg="false" NextFile="Convert.st"/>
+    <ROW File="ScaledDec.st" Component_="AbstNamespc.st" FileName="Scaled~1.st|ScaledDec.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\ScaledDec.st" SelfReg="false" NextFile="Security.st"/>
+    <ROW File="Seaside.star" Component_="Announcements.star" FileName="Seasid~4.sta|Seaside.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Seaside.star" SelfReg="false" NextFile="Sockets.star"/>
+    <ROW File="SeasideCore.star" Component_="Announcements.star" FileName="Seasid~1.sta|Seaside-Core.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Seaside-Core.star" SelfReg="false" NextFile="SeasideDevelopment.star"/>
+    <ROW File="SeasideDevelopment.star" Component_="Announcements.star" FileName="Seasid~2.sta|Seaside-Development.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Seaside-Development.star" SelfReg="false" NextFile="SeasideExamples.star"/>
+    <ROW File="SeasideExamples.star" Component_="Announcements.star" FileName="Seasid~3.sta|Seaside-Examples.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Seaside-Examples.star" SelfReg="false" NextFile="Seaside.star"/>
+    <ROW File="Security.st" Component_="AbstNamespc.st" FileName="Security.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Security.st" SelfReg="false" NextFile="Semaphore.st"/>
+    <ROW File="Semaphore.st" Component_="AbstNamespc.st" FileName="Semaph~1.st|Semaphore.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Semaphore.st" SelfReg="false" NextFile="SeqCollect.st"/>
+    <ROW File="SeqCollect.st" Component_="AbstNamespc.st" FileName="SeqCol~1.st|SeqCollect.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\SeqCollect.st" SelfReg="false" NextFile="Set.st"/>
+    <ROW File="Set.st" Component_="AbstNamespc.st" FileName="Set.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Set.st" SelfReg="false" NextFile="SharedQueue.st"/>
+    <ROW File="SharedQueue.st" Component_="AbstNamespc.st" FileName="Shared~1.st|SharedQueue.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\SharedQueue.st" SelfReg="false" NextFile="SmallInt.st"/>
+    <ROW File="SmallInt.st" Component_="AbstNamespc.st" FileName="SmallInt.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\SmallInt.st" SelfReg="false" NextFile="SortCollect.st"/>
+    <ROW File="Sockets.star" Component_="Announcements.star" FileName="Socket~1.sta|Sockets.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Sockets.star" SelfReg="false" NextFile="Sport.star"/>
+    <ROW File="SortCollect.st" Component_="AbstNamespc.st" FileName="SortCo~1.st|SortCollect.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\SortCollect.st" SelfReg="false" NextFile="Stream.st"/>
+    <ROW File="SortCriter.st" Component_="Bench.st" FileName="SortCr~1.st|SortCriter.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\SortCriter.st" SelfReg="false" NextFile="Sync.st"/>
+    <ROW File="Sorting.st" Component_="CParseTypetest.st" FileName="Sorting.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\Sorting.st" SelfReg="false" NextFile="t.st"/>
+    <ROW File="Sport.star" Component_="Announcements.star" FileName="Sport~1.sta|Sport.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Sport.star" SelfReg="false" NextFile="SUnit.star"/>
+    <ROW File="Stream.st" Component_="AbstNamespc.st" FileName="Stream.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Stream.st" SelfReg="false" NextFile="StreamOps.st"/>
+    <ROW File="StreamOps.st" Component_="AbstNamespc.st" FileName="Stream~1.st|StreamOps.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\StreamOps.st" SelfReg="false" NextFile="String.st"/>
+    <ROW File="String.st" Component_="AbstNamespc.st" FileName="String.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\String.st" SelfReg="false" NextFile="Symbol.st"/>
+    <ROW File="Swazoo.star" Component_="Announcements.star" FileName="Swazoo~1.sta|Swazoo.star" Attributes="0" SourcePath="gst-win\share\smalltalk\Swazoo.star" SelfReg="false" NextFile="CParseTypetest.st"/>
+    <ROW File="SymLink.st" Component_="AbstNamespc.st" FileName="SymLink.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\SymLink.st" SelfReg="false" NextFile="SysDict.st"/>
+    <ROW File="Symbol.st" Component_="AbstNamespc.st" FileName="Symbol.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Symbol.st" SelfReg="false" NextFile="SymLink.st"/>
+    <ROW File="Sync.st" Component_="Bench.st" FileName="Sync.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Sync.st" SelfReg="false" NextFile="Tetris.st"/>
+    <ROW File="SysDict.st" Component_="AbstNamespc.st" FileName="SysDict.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\SysDict.st" SelfReg="false" NextFile="SysExcept.st"/>
+    <ROW File="SysExcept.st" Component_="AbstNamespc.st" FileName="SysExc~1.st|SysExcept.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\SysExcept.st" SelfReg="false" NextFile="Time.st"/>
+    <ROW File="Test.st" Component_="Convert.st" FileName="Test.st" Attributes="0" SourcePath="gst-win\share\smalltalk\scripts\Test.st" SelfReg="false" NextFile="SeasideCore.star"/>
+    <ROW File="Tetris.st" Component_="Bench.st" FileName="Tetris.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Tetris.st" SelfReg="false" NextFile="Timer.st"/>
+    <ROW File="Time.st" Component_="AbstNamespc.st" FileName="Time.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Time.st" SelfReg="false" NextFile="Transcript.st"/>
+    <ROW File="Timer.st" Component_="Bench.st" FileName="Timer.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Timer.st" SelfReg="false" NextFile="Tokenizer.st"/>
+    <ROW File="TokenStream.st" Component_="Bench.st" FileName="TokenS~1.st|TokenStream.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\TokenStream.st" SelfReg="false" NextFile="xml.sed"/>
+    <ROW File="Tokenizer.st" Component_="Bench.st" FileName="Tokeni~1.st|Tokenizer.st" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\Tokenizer.st" SelfReg="false" NextFile="TokenStream.st"/>
+    <ROW File="Transcript.st" Component_="AbstNamespc.st" FileName="Transc~1.st|Transcript.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\Transcript.st" SelfReg="false" NextFile="True.st"/>
+    <ROW File="True.st" Component_="AbstNamespc.st" FileName="True.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\True.st" SelfReg="false" NextFile="UndefObject.st"/>
+    <ROW File="URL.st" Component_="AbstNamespc.st" FileName="URL.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\URL.st" SelfReg="false" NextFile="ValueAdapt.st"/>
+    <ROW File="UndefObject.st" Component_="AbstNamespc.st" FileName="UndefO~1.st|UndefObject.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\UndefObject.st" SelfReg="false" NextFile="UniChar.st"/>
+    <ROW File="UniChar.st" Component_="AbstNamespc.st" FileName="UniChar.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\UniChar.st" SelfReg="false" NextFile="UniString.st"/>
+    <ROW File="UniString.st" Component_="AbstNamespc.st" FileName="UniStr~1.st|UniString.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\UniString.st" SelfReg="false" NextFile="URL.st"/>
+    <ROW File="VFS.st" Component_="AbstNamespc.st" FileName="VFS.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\VFS.st" SelfReg="false" NextFile="VFSZip.st"/>
+    <ROW File="VFSAddOns.star" Component_="Announcements.star" FileName="VFSAdd~1.sta|VFSAddOns.star" Attributes="0" SourcePath="gst-win\share\smalltalk\VFSAddOns.star" SelfReg="false" NextFile="VisualGST.star"/>
+    <ROW File="VFSZip.st" Component_="AbstNamespc.st" FileName="VFSZip.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\VFSZip.st" SelfReg="false" NextFile="WeakObjects.st"/>
+    <ROW File="ValueAdapt.st" Component_="AbstNamespc.st" FileName="ValueA~1.st|ValueAdapt.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\ValueAdapt.st" SelfReg="false" NextFile="VarBinding.st"/>
+    <ROW File="VarBinding.st" Component_="AbstNamespc.st" FileName="VarBin~1.st|VarBinding.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\VarBinding.st" SelfReg="false" NextFile="VFS.st"/>
+    <ROW File="VisualGST.star" Component_="Announcements.star" FileName="Visual~1.sta|VisualGST.star" Attributes="0" SourcePath="gst-win\share\smalltalk\VisualGST.star" SelfReg="false" NextFile="WebServer.star"/>
+    <ROW File="WeakObjects.st" Component_="AbstNamespc.st" FileName="WeakOb~1.st|WeakObjects.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\WeakObjects.st" SelfReg="false" NextFile="WriteStream.st"/>
+    <ROW File="WebServer.star" Component_="Announcements.star" FileName="WebSer~1.sta|WebServer.star" Attributes="0" SourcePath="gst-win\share\smalltalk\WebServer.star" SelfReg="false" NextFile="XMLDOM.star"/>
+    <ROW File="WriteStream.st" Component_="AbstNamespc.st" FileName="WriteS~1.st|WriteStream.st" Attributes="0" SourcePath="gst-win\share\smalltalk\kernel\WriteStream.st" SelfReg="false" NextFile="LibSDL.star"/>
+    <ROW File="XMLDOM.star" Component_="Announcements.star" FileName="XML-DO~1.sta|XML-DOM.star" Attributes="0" SourcePath="gst-win\share\smalltalk\XML-DOM.star" SelfReg="false" NextFile="XMLExpat.star"/>
+    <ROW File="XMLExpat.star" Component_="Announcements.star" FileName="XML-Ex~1.sta|XML-Expat.star" Attributes="0" SourcePath="gst-win\share\smalltalk\XML-Expat.star" SelfReg="false" NextFile="XMLParserTests.star"/>
+    <ROW File="XMLParserTests.star" Component_="Announcements.star" FileName="XML-Pa~1.sta|XML-ParserTests.star" Attributes="0" SourcePath="gst-win\share\smalltalk\XML-ParserTests.star" SelfReg="false" NextFile="XMLPullParser.star"/>
+    <ROW File="XMLPullParser.star" Component_="Announcements.star" FileName="XML-Pu~1.sta|XML-PullParser.star" Attributes="0" SourcePath="gst-win\share\smalltalk\XML-PullParser.star" SelfReg="false" NextFile="XMLSAXDriver.star"/>
+    <ROW File="XMLSAXDriver.star" Component_="Announcements.star" FileName="XML-SA~1.sta|XML-SAXDriver.star" Attributes="0" SourcePath="gst-win\share\smalltalk\XML-SAXDriver.star" SelfReg="false" NextFile="XMLSAXParser.star"/>
+    <ROW File="XMLSAXParser.star" Component_="Announcements.star" FileName="XML-SA~2.sta|XML-SAXParser.star" Attributes="0" SourcePath="gst-win\share\smalltalk\XML-SAXParser.star" SelfReg="false" NextFile="XMLXMLNodeBuilder.star"/>
+    <ROW File="XMLXMLNodeBuilder.star" Component_="Announcements.star" FileName="XML-XM~1.sta|XML-XMLNodeBuilder.star" Attributes="0" SourcePath="gst-win\share\smalltalk\XML-XMLNodeBuilder.star" SelfReg="false" NextFile="XMLXMLParser.star"/>
+    <ROW File="XMLXMLParser.star" Component_="Announcements.star" FileName="XML-XM~2.sta|XML-XMLParser.star" Attributes="0" SourcePath="gst-win\share\smalltalk\XML-XMLParser.star" SelfReg="false" NextFile="XPath.star"/>
+    <ROW File="XPath.star" Component_="Announcements.star" FileName="XPath~1.sta|XPath.star" Attributes="0" SourcePath="gst-win\share\smalltalk\XPath.star" SelfReg="false" NextFile="XSL.star"/>
+    <ROW File="XSL.star" Component_="Announcements.star" FileName="XSL~1.sta|XSL.star" Attributes="0" SourcePath="gst-win\share\smalltalk\XSL.star" SelfReg="false" NextFile="ZLib.star"/>
+    <ROW File="ZLib.star" Component_="Announcements.star" FileName="ZLib~1.sta|ZLib.star" Attributes="0" SourcePath="gst-win\share\smalltalk\ZLib.star" SelfReg="false" NextFile="digest3290.dll"/>
+    <ROW File="deb" Component_="deb" FileName="deb" Attributes="0" SourcePath="gst-win\libexec\smalltalk\vfs\deb" SelfReg="false" NextFile="lslR"/>
+    <ROW File="digest.a" Component_="digest.a" FileName="digest.a" Attributes="0" SourcePath="gst-win\smalltalk\digest.a" SelfReg="false" NextFile="digest.dll.a"/>
+    <ROW File="digest.dll.a" Component_="digest.a" FileName="digest~1.a|digest.dll.a" Attributes="0" SourcePath="gst-win\smalltalk\digest.dll.a" SelfReg="false" NextFile="digest.la"/>
+    <ROW File="digest.la" Component_="digest.a" FileName="digest.la" Attributes="0" SourcePath="gst-win\smalltalk\digest.la" SelfReg="false" NextFile="expat3290.dll"/>
+    <ROW File="digest3290.dll" Component_="digest3290.dll" FileName="digest~1.dll|digest-3-2-90.dll" Attributes="0" SourcePath="gst-win\smalltalk\digest-3-2-90.dll" SelfReg="false" NextFile="digest.a"/>
+    <ROW File="echo.st" Component_="CParseTypetest.st" FileName="echo.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\echo.st" SelfReg="false" NextFile="Interr.st"/>
+    <ROW File="expat.a" Component_="digest.a" FileName="expat.a" Attributes="0" SourcePath="gst-win\smalltalk\expat.a" SelfReg="false" NextFile="expat.dll.a"/>
+    <ROW File="expat.dll.a" Component_="digest.a" FileName="expatd~1.a|expat.dll.a" Attributes="0" SourcePath="gst-win\smalltalk\expat.dll.a" SelfReg="false" NextFile="expat.la"/>
+    <ROW File="expat.la" Component_="digest.a" FileName="expat.la" Attributes="0" SourcePath="gst-win\smalltalk\expat.la" SelfReg="false" NextFile="gstglib3290.dll"/>
+    <ROW File="expat3290.dll" Component_="expat3290.dll" FileName="expat-~1.dll|expat-3-2-90.dll" Attributes="0" SourcePath="gst-win\smalltalk\expat-3-2-90.dll" SelfReg="false" NextFile="expat.a"/>
+    <ROW File="gnusmalltalk.pc" Component_="gnusmalltalk.pc" FileName="gnu-sm~1.pc|gnu-smalltalk.pc" Attributes="0" SourcePath="gst-win\pkgconfig\gnu-smalltalk.pc" SelfReg="false" NextFile="gstpackage.m4"/>
+    <ROW File="gnutlswrapper.exe" Component_="gnutlswrapper.exe" FileName="gnutls~1.exe|gnutls-wrapper.exe" Attributes="0" SourcePath="gst-win\libexec\smalltalk\gnutls-wrapper.exe" SelfReg="false" NextFile="deb"/>
+    <ROW File="gst.exe" Component_="gst.exe" FileName="gst.exe" Attributes="0" SourcePath="gst-win\gst.exe" SelfReg="false" NextFile="gstgobject.h"/>
+    <ROW File="gst.h" Component_="gstgobject.h" FileName="gst.h" Attributes="0" SourcePath="gst-win\include\gst.h" SelfReg="false" NextFile="gstpub.h"/>
+    <ROW File="gst.im" Component_="digest.a" FileName="gst.im" Attributes="0" SourcePath="gst-win\smalltalk\gst.im" SelfReg="false" NextFile="gstopengl3290.dll"/>
+    <ROW File="gst.m4" Component_="gstpackage.m4" FileName="gst.m4" Attributes="0" SourcePath="gst-win\share\aclocal\gst.m4" SelfReg="false" NextFile="Announcements.star"/>
+    <ROW File="gstblox.exe" Component_="gstblox.exe" FileName="gst-blox.exe" Attributes="0" SourcePath="gst-win\gst-blox.exe" SelfReg="false" NextFile="gstbrowser.exe"/>
+    <ROW File="gstbrowser.exe" Component_="gstbrowser.exe" FileName="gst-br~1.exe|gst-browser.exe" Attributes="0" SourcePath="gst-win\gst-browser.exe" SelfReg="false" NextFile="gstconfig"/>
+    <ROW File="gstconfig" Component_="gstconfig" FileName="gst-co~1|gst-config" Attributes="0" SourcePath="gst-win\gst-config" SelfReg="false" NextFile="gstconvert.exe"/>
+    <ROW File="gstconvert.exe" Component_="gstconvert.exe" FileName="gst-co~1.exe|gst-convert.exe" Attributes="0" SourcePath="gst-win\gst-convert.exe" SelfReg="false" NextFile="gstdoc.exe"/>
+    <ROW File="gstdoc.exe" Component_="gstdoc.exe" FileName="gst-doc.exe" Attributes="0" SourcePath="gst-win\gst-doc.exe" SelfReg="false" NextFile="gstload.exe"/>
+    <ROW File="gstglib.a" Component_="digest.a" FileName="gst-glib.a" Attributes="0" SourcePath="gst-win\smalltalk\gst-glib.a" SelfReg="false" NextFile="gstglib.dll.a"/>
+    <ROW File="gstglib.dll.a" Component_="digest.a" FileName="gst-gl~1.a|gst-glib.dll.a" Attributes="0" SourcePath="gst-win\smalltalk\gst-glib.dll.a" SelfReg="false" NextFile="gstglib.la"/>
+    <ROW File="gstglib.la" Component_="digest.a" FileName="gst-glib.la" Attributes="0" SourcePath="gst-win\smalltalk\gst-glib.la" SelfReg="false" NextFile="gstgtk3290.dll"/>
+    <ROW File="gstglib3290.dll" Component_="gstglib3290.dll" FileName="gst-gl~1.dll|gst-glib-3-2-90.dll" Attributes="0" SourcePath="gst-win\smalltalk\gst-glib-3-2-90.dll" SelfReg="false" NextFile="gstglib.a"/>
+    <ROW File="gstgobject.h" Component_="gstgobject.h" FileName="gst-go~1.h|gst-gobject.h" Attributes="0" SourcePath="gst-win\include\gst-gobject.h" SelfReg="false" NextFile="gst.h"/>
+    <ROW File="gstgtk.a" Component_="digest.a" FileName="gst-gtk.a" Attributes="0" SourcePath="gst-win\smalltalk\gst-gtk.a" SelfReg="false" NextFile="gstgtk.dll.a"/>
+    <ROW File="gstgtk.dll.a" Component_="digest.a" FileName="gst-gt~1.a|gst-gtk.dll.a" Attributes="0" SourcePath="gst-win\smalltalk\gst-gtk.dll.a" SelfReg="false" NextFile="gstgtk.la"/>
+    <ROW File="gstgtk.la" Component_="digest.a" FileName="gst-gtk.la" Attributes="0" SourcePath="gst-win\smalltalk\gst-gtk.la" SelfReg="false" NextFile="gst.im"/>
+    <ROW File="gstgtk3290.dll" Component_="gstgtk3290.dll" FileName="gst-gt~1.dll|gst-gtk-3-2-90.dll" Attributes="0" SourcePath="gst-win\smalltalk\gst-gtk-3-2-90.dll" SelfReg="false" NextFile="gstgtk.a"/>
+    <ROW File="gstload.exe" Component_="gstload.exe" FileName="gst-load.exe" Attributes="0" SourcePath="gst-win\gst-load.exe" SelfReg="false" NextFile="gstpackage.exe"/>
+    <ROW File="gstopengl.a" Component_="digest.a" FileName="gstope~1.a|gstopengl.a" Attributes="0" SourcePath="gst-win\smalltalk\gstopengl.a" SelfReg="false" NextFile="gstopengl.dll.a"/>
+    <ROW File="gstopengl.dll.a" Component_="digest.a" FileName="gstope~2.a|gstopengl.dll.a" Attributes="0" SourcePath="gst-win\smalltalk\gstopengl.dll.a" SelfReg="false" NextFile="gstopengl.la"/>
+    <ROW File="gstopengl.la" Component_="digest.a" FileName="gstope~1.la|gstopengl.la" Attributes="0" SourcePath="gst-win\smalltalk\gstopengl.la" SelfReg="false" NextFile="iconv3290.dll"/>
+    <ROW File="gstopengl3290.dll" Component_="gstopengl3290.dll" FileName="gstope~1.dll|gstopengl-3-2-90.dll" Attributes="0" SourcePath="gst-win\smalltalk\gstopengl-3-2-90.dll" SelfReg="false" NextFile="gstopengl.a"/>
+    <ROW File="gstpackage.exe" Component_="gstpackage.exe" FileName="gst-pa~1.exe|gst-package.exe" Attributes="0" SourcePath="gst-win\gst-package.exe" SelfReg="false" NextFile="gstprofile.exe"/>
+    <ROW File="gstpackage.m4" Component_="gstpackage.m4" FileName="gst-pa~1.m4|gst-package.m4" Attributes="0" SourcePath="gst-win\share\aclocal\gst-package.m4" SelfReg="false" NextFile="gst.m4"/>
+    <ROW File="gstprofile.exe" Component_="gstprofile.exe" FileName="gst-pr~1.exe|gst-profile.exe" Attributes="0" SourcePath="gst-win\gst-profile.exe" SelfReg="false" NextFile="gstreload.exe"/>
+    <ROW File="gstpub.h" Component_="gstgobject.h" FileName="gstpub.h" Attributes="0" SourcePath="gst-win\include\gstpub.h" SelfReg="false" NextFile="libdl.dll"/>
+    <ROW File="gstreload.exe" Component_="gstreload.exe" FileName="gst-re~1.exe|gst-reload.exe" Attributes="0" SourcePath="gst-win\gst-reload.exe" SelfReg="false" NextFile="gstremote.exe"/>
+    <ROW File="gstremote.exe" Component_="gstremote.exe" FileName="gst-re~2.exe|gst-remote.exe" Attributes="0" SourcePath="gst-win\gst-remote.exe" SelfReg="false" NextFile="gstsunit.exe"/>
+    <ROW File="gstsunit.exe" Component_="gstsunit.exe" FileName="gst-su~1.exe|gst-sunit.exe" Attributes="0" SourcePath="gst-win\gst-sunit.exe" SelfReg="false" NextFile="gst.exe"/>
+    <ROW File="iconv.a" Component_="digest.a" FileName="iconv.a" Attributes="0" SourcePath="gst-win\smalltalk\iconv.a" SelfReg="false" NextFile="iconv.dll.a"/>
+    <ROW File="iconv.dll.a" Component_="digest.a" FileName="iconvd~1.a|iconv.dll.a" Attributes="0" SourcePath="gst-win\smalltalk\iconv.dll.a" SelfReg="false" NextFile="iconv.la"/>
+    <ROW File="iconv.la" Component_="digest.a" FileName="iconv.la" Attributes="0" SourcePath="gst-win\smalltalk\iconv.la" SelfReg="false" NextFile="libc.la"/>
+    <ROW File="iconv3290.dll" Component_="iconv3290.dll" FileName="iconv-~1.dll|iconv-3-2-90.dll" Attributes="0" SourcePath="gst-win\smalltalk\iconv-3-2-90.dll" SelfReg="false" NextFile="iconv.a"/>
+    <ROW File="libc.la" Component_="digest.a" FileName="libc.la" Attributes="0" SourcePath="gst-win\smalltalk\libc.la" SelfReg="false" NextFile="sdl3290.dll"/>
+    <ROW File="libdl.dll" Component_="libdl.dll" FileName="libdl.dll" Attributes="0" SourcePath="gst-win\libdl.dll" SelfReg="false" NextFile="gnutlswrapper.exe"/>
+    <ROW File="libffi5.dll" Component_="libffi5.dll" FileName="libffi-5.dll" Attributes="0" SourcePath="gst-win\libffi-5.dll" SelfReg="false" NextFile="libgst7.dll"/>
+    <ROW File="libgst.a" Component_="gstconfig" FileName="libgst.a" Attributes="0" SourcePath="gst-win\libgst.a" SelfReg="false" NextFile="libgst.dll.a"/>
+    <ROW File="libgst.dll.a" Component_="gstconfig" FileName="libgst~3.a|libgst.dll.a" Attributes="0" SourcePath="gst-win\libgst.dll.a" SelfReg="false" NextFile="libgst.la"/>
+    <ROW File="libgst.la" Component_="gstconfig" FileName="libgst.la" Attributes="0" SourcePath="gst-win\libgst.la" SelfReg="false" NextFile="libltdl7.dll"/>
+    <ROW File="libgst7.dll" Component_="libgst7.dll" FileName="libgst-7.dll" Attributes="0" SourcePath="gst-win\libgst-7.dll" SelfReg="false" NextFile="libgstgobject1.dll"/>
+    <ROW File="libgstgobject.a" Component_="gstconfig" FileName="libgst~1.a|libgst-gobject.a" Attributes="0" SourcePath="gst-win\libgst-gobject.a" SelfReg="false" NextFile="libgstgobject.dll.a"/>
+    <ROW File="libgstgobject.dll.a" Component_="gstconfig" FileName="libgst~2.a|libgst-gobject.dll.a" Attributes="0" SourcePath="gst-win\libgst-gobject.dll.a" SelfReg="false" NextFile="libgstgobject.la"/>
+    <ROW File="libgstgobject.la" Component_="gstconfig" FileName="libgst~1.la|libgst-gobject.la" Attributes="0" SourcePath="gst-win\libgst-gobject.la" SelfReg="false" NextFile="libgst.a"/>
+    <ROW File="libgstgobject1.dll" Component_="libgstgobject1.dll" FileName="libgst~1.dll|libgst-gobject-1.dll" Attributes="0" SourcePath="gst-win\libgst-gobject-1.dll" SelfReg="false" NextFile="libgstgobject.a"/>
+    <ROW File="libltdl7.dll" Component_="libltdl7.dll" FileName="libltd~1.dll|libltdl-7.dll" Attributes="0" SourcePath="gst-win\libltdl-7.dll" SelfReg="false" NextFile="gnusmalltalk.pc"/>
+    <ROW File="lslR" Component_="deb" FileName="lslR" Attributes="0" SourcePath="gst-win\libexec\smalltalk\vfs\lslR" SelfReg="false" NextFile="mailfs"/>
+    <ROW File="mailfs" Component_="deb" FileName="mailfs" Attributes="0" SourcePath="gst-win\libexec\smalltalk\vfs\mailfs" SelfReg="false" NextFile="patchfs"/>
+    <ROW File="market.st" Component_="CParseTypetest.st" FileName="market.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\market.st" SelfReg="false" NextFile="Process.st_1"/>
+    <ROW File="packages.xml" Component_="Announcements.star" FileName="packages.xml" Attributes="0" SourcePath="gst-win\share\smalltalk\packages.xml" SelfReg="false" NextFile="Parser.star"/>
+    <ROW File="patchfs" Component_="deb" FileName="patchfs" Attributes="0" SourcePath="gst-win\libexec\smalltalk\vfs\patchfs" SelfReg="false" NextFile="uar"/>
+    <ROW File="pepe.sed" Component_="Bench.st" FileName="pepe.sed" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\pepe.sed" SelfReg="false" NextFile="PipeStream.st"/>
+    <ROW File="resolve.st" Component_="CParseTypetest.st" FileName="resolve.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\resolve.st" SelfReg="false" NextFile="Sorting.st"/>
+    <ROW File="sdl.a" Component_="digest.a" FileName="sdl.a" Attributes="0" SourcePath="gst-win\smalltalk\sdl.a" SelfReg="false" NextFile="sdl.dll.a"/>
+    <ROW File="sdl.dll.a" Component_="digest.a" FileName="sdldll~1.a|sdl.dll.a" Attributes="0" SourcePath="gst-win\smalltalk\sdl.dll.a" SelfReg="false" NextFile="sdl.la"/>
+    <ROW File="sdl.la" Component_="digest.a" FileName="sdl.la" Attributes="0" SourcePath="gst-win\smalltalk\sdl.la" SelfReg="false" NextFile="zlib3290.dll"/>
+    <ROW File="sdl3290.dll" Component_="sdl3290.dll" FileName="sdl-3-~1.dll|sdl-3-2-90.dll" Attributes="0" SourcePath="gst-win\smalltalk\sdl-3-2-90.dll" SelfReg="false" NextFile="sdl.a"/>
+    <ROW File="shell" Component_="Bench.st" FileName="shell" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\shell" SelfReg="false" NextFile="SortCriter.st"/>
+    <ROW File="t.st" Component_="CParseTypetest.st" FileName="t.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\t.st" SelfReg="false" NextFile="torture.st"/>
+    <ROW File="torture.st" Component_="CParseTypetest.st" FileName="torture.st" Attributes="0" SourcePath="gst-win\share\smalltalk\unsupported\torture.st" SelfReg="false" NextFile="VFSAddOns.star"/>
+    <ROW File="uar" Component_="deb" FileName="uar" Attributes="0" SourcePath="gst-win\libexec\smalltalk\vfs\uar" SelfReg="false" NextFile="ucpio"/>
+    <ROW File="ucpio" Component_="deb" FileName="ucpio" Attributes="0" SourcePath="gst-win\libexec\smalltalk\vfs\ucpio" SelfReg="false" NextFile="ulha"/>
+    <ROW File="ulha" Component_="deb" FileName="ulha" Attributes="0" SourcePath="gst-win\libexec\smalltalk\vfs\ulha" SelfReg="false" NextFile="urar"/>
+    <ROW File="urar" Component_="deb" FileName="urar" Attributes="0" SourcePath="gst-win\libexec\smalltalk\vfs\urar" SelfReg="false" NextFile="utar"/>
+    <ROW File="utar" Component_="deb" FileName="utar" Attributes="0" SourcePath="gst-win\libexec\smalltalk\vfs\utar" SelfReg="false" NextFile="uzip"/>
+    <ROW File="uzip" Component_="deb" FileName="uzip" Attributes="0" SourcePath="gst-win\libexec\smalltalk\vfs\uzip" SelfReg="false" NextFile="uzoo"/>
+    <ROW File="uzoo" Component_="deb" FileName="uzoo" Attributes="0" SourcePath="gst-win\libexec\smalltalk\vfs\uzoo" SelfReg="false" NextFile="libffi5.dll"/>
+    <ROW File="xml.sed" Component_="Bench.st" FileName="xml.sed" Attributes="0" SourcePath="gst-win\share\smalltalk\examples\xml.sed" SelfReg="false" NextFile="GLib.star"/>
+    <ROW File="zlib.a" Component_="digest.a" FileName="zlib.a" Attributes="0" SourcePath="gst-win\smalltalk\zlib.a" SelfReg="false" NextFile="zlib.dll.a"/>
+    <ROW File="zlib.dll.a" Component_="digest.a" FileName="zlibdl~1.a|zlib.dll.a" Attributes="0" SourcePath="gst-win\smalltalk\zlib.dll.a" SelfReg="false" NextFile="zlib.la"/>
+    <ROW File="zlib.la" Component_="digest.a" FileName="zlib.la" Attributes="0" SourcePath="gst-win\smalltalk\zlib.la" SelfReg="false"/>
+    <ROW File="zlib3290.dll" Component_="zlib3290.dll" FileName="zlib-3~1.dll|zlib-3-2-90.dll" Attributes="0" SourcePath="gst-win\smalltalk\zlib-3-2-90.dll" SelfReg="false" NextFile="zlib.a"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="." PackageFileName="gst-3.2.90" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+    <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ATTRIBUTE name="FixedSizeBitmaps" value="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Type="1" Source="aicustact.dll" Target="GetLocalizedCredentials"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiEnvComponent">
+    <ROW Environment="PATH" Name="=-*Path" Value="[APPDIR];[~]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="gst.exe" SourcePath="gst-win\gst.exe" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]" DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
