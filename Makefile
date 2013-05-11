@@ -1,4 +1,6 @@
+AIP=gst-3.2.90.aip
+
 all: installer
 
-installer: gst-3.2.90.aip
-	AdvancedInstaller /build gst-3.2.90.aip
+installer: $(AIP)
+	AdvancedInstaller /build $(AIP)
